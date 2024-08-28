@@ -1,0 +1,88 @@
+Historial comando maquina maestro:
+  1  sudo vim /etc/bind/named.conf.local
+    2  sudo cp /etc/bind/db.local /etc/bind/db.sig.com
+    3  sudo vim /etc/bind/db.sig.com
+    4  sudo systemctl restart bind9
+    5  exit
+    6  sudo vim /etc/bind/named.conf.local
+    7  exit
+    8  sudo ls -l /etc/bind/db.sig.com
+    9  sudo vim sudo /etc/bind/db.sig.com
+   10  sudo ls -l /etc/bind/db.sig.com
+   11  sudo chown root:bind /etc/bind/db.sig.com
+   12  sudo chmod 640 /etc/bind/db.sig.com
+   13  sudo ls -l /etc/bind/db.sig.com
+   14  sudo systemctl restart bind9
+   15  exit
+   16  sudo vim /etc/bind/db.sig.com
+   17  sudo vim /etc/bind/named.conf.options
+   18  sudo named-checkconf
+   19  sudo named-checkzone sig.com /etc/bind/db.sig.com
+   20  sudo vim /etc/bind/db.sig.com
+   21  sudo named-checkzone sig.com /etc/bind/db.sig.com
+   22  sudo systemctl restart bind9
+   23  exit
+   24  dig @localhost maestro.sig.com
+   25  dig @localhost esclavo.sig.com
+   26  dig @localhost cliente.sig.com
+   27  exit
+   28  curl -u martha http://192.168.50.5/archivos_privados/
+   29  curl -u camilo http://192.168.50.5/archivos_privados/
+Historial comando maquina esclavo:
+1  cd...
+  322  cd .
+  323  cd
+  324  sudo vim /etc/apache2/apache2.conf
+  325  sudo systemctl restart apache2
+  326  sudo systemctl reload apache2
+  327  echo "camilo:camilo" | sudo /usr/sbin/pwauth
+  328  curl -u jefferson http://localhost/archivos_privados
+  329  curl -u jefferson http://192.168.50.5/archivos_privados
+  330  curl -u jefferson http://192.168.50.5/archivos_privados/
+  331  curl -u camilo http://192.168.50.5/archivos_privados/
+  332  curl -u eirson http://192.168.50.5/archivos_privados/
+  333  curl -u martha http://192.168.50.5/archivos_privados/
+  334  curl http://192.168.50.5/archivos_privados/
+  335  curl -u http://192.168.50.5/archivos_privados/
+  336  exit
+  337  ngrok http 80
+  338  dig @192.168.50.5 sig.com AXFR
+  339  dig @localhost maestro.sig.com
+  340  dig @localhost esclavo.sig.com
+  341  dig @localhost cliente.sig.com
+  342  sudo named-checkzone sig.com /etc/bind/db.sig.com
+  343  exit
+  344  sudo vim /etc/resolv.conf
+  345  sudo systemctl restart networking
+  346  sudo vim /etc/resolv.conf
+  347  exir
+  348  exit
+  349  history > historial_comandosesclavo.txt
+Historial de Comando maquina Cliente:
+    1  sudo vim /etc/resolv.conf
+    2  dig @192.168.50.5 sig.com
+    3  dig @192.168.50.5 maestro.sig.com
+    4  dig @192.168.50.5 esclavo.sig.com
+    5  dig @192.168.50.5 cliente.sig.com
+    6  exit
+    7  nslookup esclavo.sig.com
+    8  curl -u camilo:camilo http://192.168.50.5/archivos_privados
+    9  sudo tail -f /var/log/apache2/error.log
+   10  exir
+   11  exit
+   12  curl -u camilo:camilo http://192.168.50.5/archivos_privados/
+   13  exit
+   14  curl -u martha http://192.168.50.5/archivos_privados/
+   15  curl -u eirson http://192.168.50.5/archivos_privados/
+   16  xit
+   17  exit
+   18  sudo named-checkzone sig.com /etc/bind/db.sig.com
+   19  sudo tail -f /var/log/syslog | grep named
+   20  exit
+   21  ping maestro.sig.com
+   22  ping esclavo.sig.com
+   23  sudo vim /etc/resolv.conf
+   24  exit
+   25  history > historial_comandoscliente.txt
+                                    
+
